@@ -12,6 +12,7 @@
 					<li><a href="rooms.html">Rooms</a></li>
 					<li><a href="blog.html">News</a></li>
 					<li><a href="contact.html">Contact</a></li>
+					<li><a href="Q&A.html">Q&A</a></li>
 				</ul>
 			</nav>
 
@@ -90,6 +91,7 @@
 					<li><a href="rooms.html">Rooms</a></li>
 					<li><a href="blog.html">News</a></li>
 					<li><a href="contact.html">Contact</a></li>
+					<li><a href="Q&A.html">Q&A</a></li>
 				</ul>
 			</nav>
 			<div class="button menu_button"><a href="#">book now</a></div>
