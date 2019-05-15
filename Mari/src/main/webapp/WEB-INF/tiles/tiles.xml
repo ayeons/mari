@@ -14,4 +14,8 @@
 	<definition name="tiles/*/*" extends="tiles">
 		<put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp"/>
 	</definition>
+	
+	<definition name="tiles/member/*" extends="tiles">
+		<put-attribute name="body" value="/WEB-INF/views/member/{1}.jsp" />
+	</definition>
 </tiles-definitions>

@@ -40,7 +40,7 @@
 				</div>
 
 				<!-- Header Link -->
-				<div class="header_link"><a href="#">Book Your Room Now</a></div>
+				<div class="header_link"><a href="${pageContext.request.contextPath}/member/loginMember.do">Book Your Room Now</a></div>
 
 				<!-- Hamburger Button -->
 				<div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
