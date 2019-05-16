@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8" %>
 <header class="header">
 		<div class="header_content d-flex flex-column align-items-center justify-content-lg-end justify-content-center">
 			
@@ -39,7 +41,7 @@
 				</div>
 
 				<!-- Header Link -->
-				<div class="header_link"><a href="${pageContext.request.contextPath}/member/loginMember.do">Book Your Room Now</a></div>
+				<div class="header_link"><a href="${pageContext.request.contextPath}/member/loginMember.do">로그인</a></div>
 
 				<!-- Hamburger Button -->
 				<div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
