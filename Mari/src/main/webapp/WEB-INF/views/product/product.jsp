@@ -6,6 +6,15 @@
 <!-- 샘플jsp -->
 <html>
 <head>
+<style>
+table{
+font-size: 20px;
+text-shadow: blue;
+color: black;
+font-style: inherit;
+}
+
+</style>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <%@include file="/WEB-INF/views/basicView/resourceH.jsp" %>
@@ -21,30 +30,39 @@
 			<div class="button home_button"><a href="#">book now</a></div>
 		</div>
 </div>
-<h2>room list</h2>
-<button type="button" id="dtnAdd" >상품등록</button>
-<table border="0" width="500px">
-	<tr>
-		<th>상품ID</th>
+
+<div class="rooms_right_content">
+	<div class="section_title text-center">
+		<div style="margin-top: 100px;">ROOM LIST</div>
+		<h1>Amazing Hotel in front of the Sea</h1>
+</div>
+<div class="row intro_row">
+				<div class="col-xl-8 col-lg-10 offset-xl-2 offset-lg-1">
+					<div class="intro_text text-center">
+						<p>Maecenas sollicitudin tincidunt maximus. Morbi tempus malesuada erat sed pellentesque. Donec pharetra mattis nulla, id laoreet neque scelerisque at. Quisque eget sem non ligula consectetur ultrices in quis augue. Donec imperd iet leo eget tortor dictum, eget varius eros sagittis. Curabitur tempor dignissim massa ut faucibus sollicitudin tinci dunt maximus. Morbi tempus malesuada erat sed pellentesque. Donec pharetra mattis nulla, id laoreet neque scele risque at. Quisque eget sem non ligula consectetur ultrices in quis augue. Donec imperdiet leo eget tortor dictum, eget varius eros sagittis. Curabitur tempor dignissim massa ut faucibus.</p>
+					</div>
+				</div>
+			</div>
+<button type="button" id="dtnAdd"  style="margin-left: auto; margin-right: auto;">상품등록</button>
+<table width="#" style="margin-left: auto; margin-right: auto;">
+	<tr style="margin-bottom: 5%;">
+		<th>Product ID</th>
 		<th>&nbsp;</th>
-		<th>상품명</th>
-		<th>가격</th>
+		<th style="padding-right: 25px;">name</th>
+		<th>price</th>
 	</tr>
 <c:forEach var="row" items="${list}">
 	<tr align="center">
 		<td>${row.product_id}</td>
 		<td><img src="${pageContext.request.contextPath}/resources/images/${row.picture_url}"
-		width="100" height="100"></td>
+		width="600" height="300" style="margin: 50px;"></td>
 		<td>${row.product_name}</td>
 		<td>
 	<fmt:formatNumber value="${row.price}" pattern="#,###" /></td>
 	</tr>
 </c:forEach>
 </table>
-
-
-
-
+</div>
 
 
 
