@@ -9,7 +9,7 @@
 				<ul class="d-flex flex-row align-items-center justify-content-start">
 					<li class="active"><a href="index.html">Home</a></li>
 					<li><a href="about.html">About us</a></li>
-					<li><a href="rooms.html">Rooms</a></li>
+					<li><a href="product/list">Rooms</a></li>
 					<li><a href="blog.html">News</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>

@@ -96,9 +96,9 @@
 								<img src="${pageContext.request.contextPath}/resources/images/gallery_1.jpg" alt="">
 								<div class="gallery_overlay">
 									<div class="text-center d-flex flex-column align-items-center justify-content-center">
-										<a href="#">
+										<a href="product/list">
 											<span>+</span>
-											<span>See More</span>
+											<span>더보기</span>
 										</a>
 									</div>
 								</div>
@@ -109,9 +109,9 @@
 								<img src="${pageContext.request.contextPath}/resources/images/gallery_2.jpg" alt="">
 								<div class="gallery_overlay">
 									<div class="text-center d-flex flex-column align-items-center justify-content-center">
-										<a href="#">
+										<a href="product/list">
 											<span>+</span>
-											<span>See More</span>
+											<span>더보기</span>
 										</a>
 									</div>
 								</div>
@@ -122,9 +122,9 @@
 								<img src="${pageContext.request.contextPath}/resources/images/gallery_3.jpg" alt="">
 								<div class="gallery_overlay">
 									<div class="text-center d-flex flex-column align-items-center justify-content-center">
-										<a href="#">
+										<a href="product/list">
 											<span>+</span>
-											<span>See More</span>
+											<span>더보기</span>
 										</a>
 									</div>
 								</div>
@@ -135,9 +135,9 @@
 								<img src="${pageContext.request.contextPath}/resources/images/gallery_4.jpg" alt="">
 								<div class="gallery_overlay">
 									<div class="text-center d-flex flex-column align-items-center justify-content-center">
-										<a href="#">
+										<a href="product/list">
 											<span>+</span>
-											<span>See More</span>
+											<span>더보기</span>
 										</a>
 									</div>
 								</div>
@@ -164,17 +164,17 @@
 							
 							<!-- Slide -->
 							<div class="slide">
-								<div class="background_image" style="background-image:url(./resources/images/rooms_1.jpg)"></div>
+								<div class="background_image" style="background-image:url(${pageContext.request.contextPath}/resources/images/rooms_1.jpg)"></div>
 							</div>
 
 							<!-- Slide -->
 							<div class="slide">
-								<div class="background_image" style="background-image:url(./resources/images/rooms_1.jpg)"></div>
+								<div class="background_image" style="background-image:url(${pageContext.request.contextPath}/resources/images/rooms_1.jpg)"></div>
 							</div>
 
 							<!-- Slide -->
 							<div class="slide">
-								<div class="background_image" style="background-image:url(./resources/images/rooms_1.jpg)"></div>
+								<div class="background_image" style="background-image:url(${pageContext.request.contextPath}/resources/images/rooms_1.jpg)"></div>
 							</div>
 
 						</div>
@@ -260,17 +260,17 @@
 							
 							<!-- Slide -->
 							<div class="slide">
-								<div class="background_image" style="background-image:url(./resources/images/rooms_2.jpg)"></div>
+								<div class="background_image" style="background-image:url(${pageContext.request.contextPath}/resources/images/rooms_2.jpg)"></div>
 							</div>
 
 							<!-- Slide -->
 							<div class="slide">
-								<div class="background_image" style="background-image:url(./resources/images/rooms_2.jpg)"></div>
+								<div class="background_image" style="background-image:url(${pageContext.request.contextPath}/resources/images/rooms_2.jpg)"></div>
 							</div>
 
 							<!-- Slide -->
 							<div class="slide">
-								<div class="background_image" style="background-image:url(./resources/images/rooms_2.jpg)"></div>
+								<div class="background_image" style="background-image:url(${pageContext.request.contextPath}/resources/images/rooms_2.jpg)"></div>
 							</div>
 							
 						</div>
