@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class ProductDAO {
 	
-	@Autowired
+	@Inject 
 	SqlSession sqlSession;
 		
 		public List<ProductDTO> listProduct() {

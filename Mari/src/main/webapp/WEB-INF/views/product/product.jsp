@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <!-- 샘플jsp -->
 <html>
@@ -20,6 +21,30 @@
 			<div class="button home_button"><a href="#">book now</a></div>
 		</div>
 </div>
+<h2>room list</h2>
+<button type="button" id="dtnAdd" >상품등록</button>
+<table border="0" width="500px">
+	<tr>
+		<th>상품ID</th>
+		<th>&nbsp;</th>
+		<th>상품명</th>
+		<th>가격</th>
+	</tr>
+<c:forEach var="row" items="${list}">
+	<tr align="center">
+		<td>${row.product_id}</td>
+		<td><img src="${pageContext.request.contextPath}/resources/images/${row.picture_url}"
+		width="100" height="100"></td>
+		<td>${row.product_name}</td>
+		<td>
+	<fmt:formatNumber value="${row.price}" pattern="#,###" /></td>
+	</tr>
+</c:forEach>
+</table>
+
+
+
+
 
 
 

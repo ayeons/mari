@@ -8,13 +8,15 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
-@Service("productService")
+@Service
 public class ProductService {
 	
 	@Resource
-	ProductDAO dao;
-	public List product() {
-		return dao.listProduct();
+	ProductDAO productDao;
+	
+	
+	public List<ProductDTO> listProduct() {
+		return productDao.listProduct();
 	}
 
 }
