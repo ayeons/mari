@@ -19,8 +19,12 @@ public class ProductDAO {
 		}
 		
 		public ProductDTO detailProduct(int product_id) {
+<<<<<<< HEAD
 			return sqlSession.selectOne(
 					"product.detail_product", product_id);
+=======
+			return null;
+>>>>>>> branch 'master' of https://github.com/ayeons/mari.git
 		}
 	
 		

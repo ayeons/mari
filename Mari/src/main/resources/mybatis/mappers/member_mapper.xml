@@ -29,27 +29,32 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		insert into member(
 			seq,
 			id,
-			pwd,
-			name,
-			jumin1,
-			jumin2,
-			tel,
-			mail
+			pwd
 		)
 		values (
 			mem_seq.NEXTVAL,
 			#{id},
-			#{pwd},
-			#{name},
-			#{jumin1},
-			#{jumin2},
-			#{tel},
-			#{mail}
+			#{pwd}
 		)
 	</insert>
 	
-	<update id="update" >
-		
+	<update id="updateMember" parameterType="java.util.HashMap">
+		update member
+		<set>
+			<if test="pwd!='' and pwd!=null">
+				pwd = #{pwd},
+			</if>
+			<if test="name!='' and name!=null">
+				name = #{name},
+			</if>
+			<if test="tel!='' and tel!=null">
+				tel = #{tel},
+			</if>
+			<if test="mail!='' and mail!=null">
+			mail = #{mail}
+			</if>
+		</set>
+		where id = #{id}
 	</update>
 	
 	<delete id="delete" >
@@ -66,4 +71,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		]]>
 	</select>
 	
+	<select id="selectMyDetailInfo" parameterType="String" resultType="com.eee.mari.member.MemberDTO">
+		<![CDATA[
+		  	 select * from member
+		  	  where id = #{id}
+		  ]]>
+	</select>
 </mapper>

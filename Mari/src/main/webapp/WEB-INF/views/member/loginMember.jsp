@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
@@ -9,9 +9,9 @@ function fn_login(action) {
 	var b=document.getElementById("memberPwd").value;
 	
 	if(a==null || a=="" ){
-		alert("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		alert("ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 	}else if(b==null || b==""){
-		alert("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		alert("ï¿½ï¿½Ğ¹ï¿½È£ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 	}else{
 	var formObj=document.createElement("form");
 	var id = document.createElement("input");
@@ -62,8 +62,86 @@ function fn_login(action) {
 		</div>
 </div>
 
-<!-- ¹Ù·ÎÀ§ home class¿¡ data-image-src¿¡ ¿øÇÏ´Â »çÁø³ÖÀ¸½Ã°í -->
-<!--¿ä±â´Ù ³»¿ë  Áı¾î³ÖÀ¸¼¼¿ä-->
+<!-- ï¿½Ù·ï¿½ï¿½ï¿½ home classï¿½ï¿½ data-image-srcï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã°ï¿½ -->
+<!--ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-->
+=======
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<script>
+function fn_login(action) {
+	var a=document.getElementById("memberId").value;
+	var b=document.getElementById("memberPwd").value;
+	
+	if(a==null || a=="" ){
+		alert("ì•„ì´ë””ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
+	}else if(b==null || b==""){
+		alert("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
+	}else{
+	var formObj=document.createElement("form");
+	var id = document.createElement("input");
+	var pwd = document.createElement("input");
+	
+	id.name="id";
+	pwd.name="pwd";
+	
+	id.value=document.getElementById("memberId").value;
+	pwd.value=document.getElementById("memberPwd").value;
+	
+	formObj.appendChild(id);
+	formObj.appendChild(pwd);
+	
+	document.body.appendChild(formObj);
+	
+	formObj.method="post";
+	formObj.action="${pageContext.request.contextPath}/member/login.do";
+	formObj.submit();
+	}
+}
+</script>
+<head>
+<meta charset="utf-8">
+<c:if test='${not empty message }'>
+<script>
+window.onload=function()
+{
+  result();
+}
+
+function result(){
+	alert("ì•„ì´ë””ë‚˜  ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë¦½ë‹ˆë‹¤. ë‹¤ì‹œ ë¡œê·¸ì¸í•´ì£¼ì„¸ìš”");
+}
+</script>
+</c:if>
+<title>Insert title here</title>
+</head>
+<body>
+<div class="home">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="${pageContext.request.contextPath}/resources/images/home.jpg" data-speed="0.8"></div>
+		<div class="home_container d-flex flex-column align-items-center justify-content-center">
+			<div class="home_title"><h1>Sign In</h1></div>
+			<div class="home_text text-center">
+				<label>ID : </label>
+				<input type="text" id="memberId">
+			</div>
+			<div class="home_text text-center">
+				<label>PASSWORD : </label>
+				<input type="password" id="memberPwd">
+			</div>
+			<div class="button home_button">
+				<a href=javascript:fn_login("${pageContext.request.contextPath}/member/login.do")>Sign In</a>
+			</div>
+			<div class="button home_button">
+				<a href="${pageContext.request.contextPath}/member/joinMember.do">Join Us</a>
+			</div>
+		</div>
+</div>
+
+<!-- ë°”ë¡œìœ„ home classì— data-image-srcì— ì›í•˜ëŠ” ì‚¬ì§„ë„£ìœ¼ì‹œê³  -->
+<!--ìš”ê¸°ë‹¤ ë‚´ìš©  ì§‘ì–´ë„£ìœ¼ì„¸ìš”-->
+>>>>>>> branch 'master' of https://github.com/YunMinwook/mari.git
 
 </body>
 </html>

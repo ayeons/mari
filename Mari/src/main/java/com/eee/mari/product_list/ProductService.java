@@ -19,9 +19,12 @@ public class ProductService {
 		return productDao.listProduct();
 	}
 
+<<<<<<< HEAD
 
 	public Object detailProduct(int product_id) {
 		return productDao.detailProduct(product_id);
 	}
 
+=======
+>>>>>>> branch 'master' of https://github.com/ayeons/mari.git
 }

@@ -12,13 +12,12 @@ import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
@@ -35,22 +34,27 @@ public class MemberController {
 		logger.info("/member/loginMember.jsp");
 //		List list=memberService.sample();
 //		model.addAttribute("list",list);
-		return "tiles/member/loginMember";
+		return "tiles/member/log";
 	}
 	
 	@RequestMapping(value="/login.do")
-	public String MemberLogin(Model model, @RequestParam Map<String, String> loginMap, HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public ModelAndView MemberLogin(@RequestParam Map<String, String> loginMap, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		logger.info("/member/memberLogin");
+		ModelAndView mav =new ModelAndView();
 		memberDTO = memberService.memberLogin(loginMap);
+		System.out.println(loginMap.get("id"));
 		System.out.println(memberDTO!=null);
 		
-//		if(memberDTO != null && memberDTO.getId()!=null) {
-//			HttpSession session = request.getSession();
-//			session = request.getSession();
-//			session.setAttribute("isLogOn", true); // 로그온 플래그를 true로 지정
-//			session.setAttribute("memberInfo", memberDTO); //회원정보를 session에 저장
-//		}
-		return "redirect:/member/loginMember.do";
+		if(memberDTO != null && memberDTO.getId()!=null) {
+			HttpSession session = request.getSession();
+			session = request.getSession();
+			session.setAttribute("isLogOn", true); // 로그온 플래그를 true로 지정
+			session.setAttribute("memberInfo", memberDTO); //회원정보를 session에 저장
+		}
+		
+		String viewName = "tiles/basicView/index";
+		 mav.setViewName(viewName);
+		return mav;
 	}
 	
 	@RequestMapping("/joinMember.do")
@@ -68,4 +72,16 @@ public class MemberController {
 		memberService.insertMember(memberDTO);
 		return "redirect:/member/loginMember.do";
 	}
+	
+	@RequestMapping("/logout.do")
+	public ModelAndView logout(HttpServletRequest request, HttpServletResponse response) throws Exception {
+	    ModelAndView mav =new ModelAndView();
+	    HttpSession session = request.getSession();
+	    //session에 로그아웃처리 및 회원정보 제거
+	    session.setAttribute("isLogOn", false);
+	    session.removeAttribute("memberInfo");
+	    mav.setViewName("redirect:/");
+		return mav;
+	}
+	
 }
