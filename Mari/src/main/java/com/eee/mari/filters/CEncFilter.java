@@ -20,7 +20,7 @@ public class CEncFilter implements Filter{
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		System.out.println("CEncFilter");
-		request.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("MS949");
 		chain.doFilter(request, response);
 	}
 	

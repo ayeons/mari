@@ -56,13 +56,11 @@ font-style: inherit;
 		<td>${row.product_id}</td>
 		<td><img src="${pageContext.request.contextPath}/resources/images/${row.picture_url}"
 		width="600" height="300" style="margin: 50px;"></td>
-<<<<<<< HEAD
+
 		<td>
 		<a href="${pageContext.request.contextPath}/product/detail/${row.product_id}">
 		${row.product_name}</a></td>
-=======
 		<td>${row.product_name}</td>
->>>>>>> branch 'master' of https://github.com/ayeons/mari.git
 		<td>
 	<fmt:formatNumber value="${row.price}" pattern="#,###" /></td>
 	</tr>

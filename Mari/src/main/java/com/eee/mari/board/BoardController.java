@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.eee.mari.member.MemberDTO;
+
 @Controller
 @RequestMapping("/board/*")
 public class BoardController {
@@ -24,7 +26,16 @@ public class BoardController {
 			HttpSession session)
 		throws Exception {
 		//로그인한 사용자의 아이디
-		String writer=(String)session.getAttribute("userid");
+		MemberDTO dto2=null;
+		String writer=null;
+		System.out.println(session.getAttribute("isLogOn"));
+		if((Boolean) session.getAttribute("isLogOn")) {
+			
+			dto2=(MemberDTO)session.getAttribute("memberInfo");
+			writer=dto2.getName();
+		}
+		
+		System.out.println(writer);
 		dto.setWriter(writer);
 		//레코드가 저장됨
 		boardService.create(dto);

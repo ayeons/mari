@@ -12,6 +12,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		from board
 		order by bno desc
 	</select>
+	
+	<insert id="insert">
+		insert into board (bno,title,content,writer) values
+		( seq_board.nextval, #{title}, #{content}, #{writer} )
+	</insert>
 
 
 
@@ -28,13 +33,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			where fullName=#{fullName}
 	</select>
 
-	<insert id="insert">
-			insert into board
-			(bno,title,content,writer,show)
-			values
-			(seq_board.nextval,#{title},#{content},#{writer},'y')
-
-	</insert>
 	
 	<update id="addAttach" >
 			insert into attach (fullName,bno)
