@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <!-- 샘플jsp -->
 <html>
@@ -30,10 +29,9 @@ font-style: inherit;
 			<div class="button home_button"><a href="#">book now</a></div>
 		</div>
 </div>
-
 <div class="rooms_right_content">
 	<div class="section_title text-center">
-		<div style="margin-top: 100px;">ROOM LIST</div>
+		<div style="margin-top: 100px;">More information</div>
 		<h1>Amazing Hotel in front of the Sea</h1>
 </div>
 <div class="row intro_row">
@@ -43,26 +41,43 @@ font-style: inherit;
 					</div>
 				</div>
 			</div>
-<button type="button" id="dtnAdd"  style="margin-left: auto; margin-right: auto;">상품등록</button>
-<table width="#" style="margin-left: auto; margin-right: auto;">
-	<tr style="margin-bottom: 5%;">
-		<th>Product ID</th>
-		<th>&nbsp;</th>
-		<th style="padding-right: 25px;">name</th>
-		<th>price</th>
-	</tr>
-<c:forEach var="row" items="${list}">
-	<tr align="center">
-		<td>${row.product_id}</td>
-		<td><img src="${pageContext.request.contextPath}/resources/images/${row.picture_url}"
-		width="600" height="300" style="margin: 50px;"></td>
+<table style="margin-left: auto; margin-right:  auto;">
+	<tr>
 		<td>
-		<a href="${pageContext.request.contextPath}/product/detail/${row.product_id}">
-		${row.product_name}</a></td>
-		<td>
-	<fmt:formatNumber value="${row.price}" pattern="#,###" /></td>
-	</tr>
-</c:forEach>
+			<img src="${pageContext.request.contextPath}/resources/images/${dto.picture_url}"
+				width="300px" height="300px" style="margin: 50px;">
+		</td>
+		<td align="center">
+			<table>
+				<tr>
+					<td style="margin-right: 50px;">room name</td>
+					<td>${dto.product_name}</td>
+				</tr>
+				<tr>
+					<td>price</td>
+					<td>${dto.price}</td>
+				</tr>
+				<tr>
+					<td>%nbsp;</td>
+					<td>${dto.description}</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<form name="form1" method="post"
+						action="${pageContext.request.contextPath}/product/insert.do">
+							<input type="hidden" name="product_id"
+							value="${dto.product_id}">
+							<select name="amount">
+								<c:forEach begin="1" end="10" var="i">
+									<option value="${i}">${i}</option>
+								</c:forEach>
+							</select>&nbsp;개
+							<input type="submit" value="예약">
+						</form>
+						<a href="${pageContext.request.contextPath}/product/list">ROOM LIST로 가기</a>
+					</td>
+				</tr>
+</table>
 </table>
 </div>
 
@@ -78,4 +93,3 @@ font-style: inherit;
 </div>
 <%@include file="/WEB-INF/views/basicView/resourceF.jsp" %>
 </body>
-</html>

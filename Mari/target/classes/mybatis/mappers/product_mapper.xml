@@ -10,6 +10,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			select * from product
 			order by product_name
 	</select>
+	
+	<select id="detail_product"
+	resultType="com.eee.mari.product_list.ProductDTO">
+		select * from product
+		where product_id=#{product_id}	
+	</select>
 
 	<insert id="insert">
 		

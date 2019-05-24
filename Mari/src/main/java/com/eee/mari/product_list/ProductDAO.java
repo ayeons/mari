@@ -19,7 +19,8 @@ public class ProductDAO {
 		}
 		
 		public ProductDTO detailProduct(int product_id) {
-			return null;
+			return sqlSession.selectOne(
+					"product.detail_product", product_id);
 		}
 	
 		

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="board">
+<!-- 게시물의 첨부파일 목록 -->
+
+	<select id="listAll"
+	resultType="com.eee.mari.board.BoardDTO">
+		select bno,writer,title,regdate,viewcnt
+		from board
+		order by bno desc
+	</select>
+
+
+
+	<select id="getAttach" 
+	resultType="String">
+			select fullname
+			from attach
+			where bno=#{bno}
+			order by regdate
+	</select>
+	
+	<select id="deleteAttach">
+			delete from attach
+			where fullName=#{fullName}
+	</select>
+
+	<insert id="insert">
+			insert into board
+			(bno,title,content,writer,show)
+			values
+			(seq_board.nextval,#{title},#{content},#{writer},'y')
+
+	</insert>
+	
+	<update id="addAttach" >
+			insert into attach (fullName,bno)
+			values
+		
+	</update>
+	
+	<delete id="delete" >
+		
+	</delete>
+
+
+
+
+
+
+</mapper>

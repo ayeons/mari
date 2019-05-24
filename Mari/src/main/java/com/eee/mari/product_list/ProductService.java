@@ -19,4 +19,9 @@ public class ProductService {
 		return productDao.listProduct();
 	}
 
+
+	public Object detailProduct(int product_id) {
+		return productDao.detailProduct(product_id);
+	}
+
 }
