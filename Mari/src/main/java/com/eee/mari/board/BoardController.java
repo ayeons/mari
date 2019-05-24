@@ -43,7 +43,7 @@ public class BoardController {
 		List<BoardDTO> list=boardService.listAll(0, 0, "", ""); //목록 //시작번호 끝번호 빈값
 		ModelAndView mav=new ModelAndView();
 		mav.setViewName("board/board_list");
-		Map<String,Object> map=new HashMap<>();
+		Map<String,Object> map=new HashMap<String,Object>();
 		map.put("list",list); //맵에 자료 저장
 		mav.addObject("map",map); //데이터 저장
 		return mav; //페이지 이동(출력)

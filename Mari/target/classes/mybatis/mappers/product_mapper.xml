@@ -6,19 +6,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="product">
 
 	<select id="list_product" 
-	resultType="com.eee.mari.product_list.ProductDTO">
+	resultType="com.eee.mari.product.ProductDTO">
 			select * from product
 			order by product_name
 	</select>
-<<<<<<< HEAD
+
 	
 	<select id="detail_product"
-	resultType="com.eee.mari.product_list.ProductDTO">
+	resultType="com.eee.mari.product.ProductDTO">
 		select * from product
 		where product_id=#{product_id}	
 	</select>
-=======
->>>>>>> branch 'master' of https://github.com/ayeons/mari.git
 
 	<insert id="insert">
 		

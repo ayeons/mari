@@ -1,4 +1,4 @@
-package com.eee.mari.product_list;
+package com.eee.mari.product;
 
 import org.springframework.web.multipart.MultipartFile;
 

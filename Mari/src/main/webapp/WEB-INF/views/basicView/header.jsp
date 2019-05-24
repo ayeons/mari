@@ -11,10 +11,7 @@
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
 					<li class="active"><a href="index.html">Home</a></li>
-<<<<<<< HEAD
-=======
 					<li><a href="about.html">About us</a></li>
->>>>>>> branch 'master' of https://github.com/ayeons/mari.git
 					<li><a href="product/list">Rooms</a></li>
 					<li><a href="blog.html">News</a></li>
 					<li><a href="contact.html">Contact</a></li>
@@ -52,10 +49,10 @@
 				</div>
 
 				<!-- Header Link -->
-<<<<<<< HEAD
+
 				<div class="header_link"><a href="${pageContext.request.contextPath}/member/loginMember.do">Login</a></div>
 
-=======
+
 				<div class="header_link">
 				<c:choose>
 					<c:when test="${isLogOn==true and not empty memberInfo }">
@@ -71,8 +68,7 @@
 				</c:choose>
 				</div>
 				
-				
->>>>>>> branch 'master' of https://github.com/ayeons/mari.git
+			
 				<!-- Hamburger Button -->
 				<div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
 
