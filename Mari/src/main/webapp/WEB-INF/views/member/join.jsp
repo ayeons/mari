@@ -1,14 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/styles/contact.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/styles/contact_responsive.css">
 <div class="home">
 		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="${pageContext.request.contextPath}/resources/images/home.jpg" data-speed="0.8"></div>
 		<div class="home_container d-flex flex-column align-items-center justify-content-center">
-			<div class="home_title"><h1>Book Your Stay</h1></div>
-			<div class="home_text text-center">Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec vitae tempus dolor, sit amet elementum lorem. Ut cursus tempor turpis.</div>
-			<div class="button home_button"><a href="#">book now</a></div>
+			<div class="home_title"><h1>ÌöåÏõêÍ∞ÄÏûÖ</h1></div>
+			<!-- 
+				<div class="home_text text-center">Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec vitae tempus dolor, sit amet elementum lorem. Ut cursus tempor turpis.</div>
+				<div class="button home_button"><a href="#">book now</a></div>
+			 -->
 		</div>
 </div>
 
@@ -23,34 +25,34 @@
 						</div>
 						
 						<div class="contact_form_container">
-							<form action="#" class="contact_form text-center">
+							<form action="${pageContext.request.contextPath}/member/insertMember.do" class="contact_form text-center">
 								<div class="row">
 									<div class="col-lg-6">
-										<input type="text" class="contact_input" id="id" placeholder="Your id" required="required">
+										<input type="text" class="contact_input" name="id" id="id" placeholder="Your id" required="required">
 									</div>
 									<div class="col-lg-6">
-										<input type="text" class="contact_input" id="pwd" placeholder="Your pwd" required="required">
+										<input type="text" class="contact_input" name="pwd" id="pwd" placeholder="Your pwd" required="required">
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-lg-6">
-										<input type="text" class="contact_input" id="name" placeholder="Your name" required="required">
+										<input type="text" class="contact_input" name="name" id="name" placeholder="Your name" required="required">
 									</div>
 									<div class="col-lg-6">
-										<input type="text" class="contact_input" id="tel" placeholder="Your tel" required="required">
+										<input type="text" class="contact_input" name="tel" id="tel" placeholder="Your tel">
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-lg-6">
-										<input type="text" class="contact_input" id="jumin1" placeholder="¡÷πŒπ¯»£æ’¿⁄∏Æ" required="required">
+										<input type="text" class="contact_input" name="jumin1" id="jumin1" placeholder="Ï£ºÎØºÎ≤àÌò∏ÏïûÏûêÎ¶¨" required="required">
 									</div>
 									<div class="col-lg-6">
-										<input type="text" class="contact_input" id="jumin2" placeholder="µﬁ¿⁄∏Æ" required="required">
+										<input type="text" class="contact_input" name="jumin2" id="jumin2" placeholder="Îí∑ÏûêÎ¶¨" required="required">
 									</div>
 								</div>
-								<input type="email" class="contact_input" id="mail" placeholder="your email">
+								<input type="email" class="contact_input" name="mail" id="mail" placeholder="your email">
 								
-								<input style="margin-bottom: 10px" type="submit" class="contact_button" value="»Æ¿Œ">
+								<input style="margin-bottom: 10px" type="submit" class="contact_button" value="ÌôïÏù∏">
 							</form>
 						</div>
 					</div>

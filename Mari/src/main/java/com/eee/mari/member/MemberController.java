@@ -13,9 +13,13 @@ import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -37,7 +41,7 @@ public class MemberController {
 		return "tiles/member/log";
 	}
 	
-	@RequestMapping(value="/login.do")
+	@RequestMapping(value="/login.do", method=RequestMethod.POST)
 	public ModelAndView MemberLogin(@RequestParam Map<String, String> loginMap, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		logger.info("/member/memberLogin");
 		ModelAndView mav =new ModelAndView();
@@ -50,27 +54,42 @@ public class MemberController {
 			session = request.getSession();
 			session.setAttribute("isLogOn", true); // 로그온 플래그를 true로 지정
 			session.setAttribute("memberInfo", memberDTO); //회원정보를 session에 저장
+			String viewName = "tiles/basicView/index";
+			mav.setViewName(viewName);
+		}else {//로그인시 회원정보가 존재하지 않으면....
+			String message = "아이디나 비밀번호가 틀립니다. 다시 로그인 해주세요";
+			mav.addObject("message",message);
+			mav.setViewName("tiles/member/log");
 		}
-		
-		String viewName = "tiles/basicView/index";
-		 mav.setViewName(viewName);
 		return mav;
 	}
 	
 	@RequestMapping("/joinMember.do")
 	public String JoinMember(Model model) {
-		logger.info("/member/memberForm.jsp");
-		return "tiles/member/memberForm";
+		logger.info("/member/join.jsp");
+		return "tiles/member/join";
 	}
 	
+	
 	@RequestMapping("/insertMember.do")
-	public String InsertMember(Model model, MemberDTO memberDTO, HttpServletRequest request, HttpServletResponse response) throws Exception{
-		logger.info("/member/InsertMember");
-		response.setContentType("text/html;charset=utf-8");
+	public ResponseEntity insertMember(@ModelAttribute("memberDTO")MemberDTO member, HttpServletRequest request, HttpServletResponse response) {
+		ResponseEntity resEntity=null;
+		String message=null;
 		HttpHeaders responseHeaders = new HttpHeaders();
-		responseHeaders.add("Content-Type", "text/html;charset=utf-8");
-		memberService.insertMember(memberDTO);
-		return "redirect:/member/loginMember.do";
+		try {
+			memberService.insertMember(member);
+			 message = "<script>";
+			    message +="alert('회원가입완료.로그인 창으로 이동합니다.');";
+			    message +="location.href='"+request.getContextPath()+"/member/loginMember.do'";
+			    message += "</script>";
+		}catch (Exception e) {
+			 message = "<script>";
+	         message +="alert('작업중 오류발생. 다시 시도해 주세요');";
+	         message +="location.href='"+request.getContextPath()+"/member/joinMember.do'";
+	         message += "</script>";
+		}
+		 resEntity = new ResponseEntity(message,responseHeaders,HttpStatus.OK);
+		 return resEntity;
 	}
 	
 	@RequestMapping("/logout.do")

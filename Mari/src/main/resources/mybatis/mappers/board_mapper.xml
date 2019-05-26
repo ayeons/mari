@@ -13,12 +13,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		order by bno desc
 	</select>
 	
+	
 	<insert id="insert">
 		insert into board (bno,title,content,writer) values
 		( seq_board.nextval, #{title}, #{content}, #{writer} )
 	</insert>
-
-
+	
 
 	<select id="getAttach" 
 	resultType="String">
@@ -28,17 +28,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			order by regdate
 	</select>
 	
+	
 	<select id="deleteAttach">
 			delete from attach
 			where fullName=#{fullName}
 	</select>
-
+	
 	
 	<update id="addAttach" >
 			insert into attach (fullName,bno)
 			values
-		
 	</update>
+	
+	
 	
 	<delete id="delete" >
 		

@@ -35,6 +35,7 @@ public class BoardDAO {
 	
 	//글쓰기
 	public void create(BoardDTO dto) throws Exception {
+
 		sqlSession.insert("board.insert", dto);
 		
 	}

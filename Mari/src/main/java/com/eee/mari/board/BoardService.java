@@ -29,7 +29,9 @@ public class BoardService {
 	}
 	
 	public void create(BoardDTO dto) throws Exception{
+
 		boardDao.create(dto);
+
 	}
 	
 	public BoardDTO read(int bno) throws Exception {
