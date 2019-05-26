@@ -64,14 +64,14 @@ font-style: inherit;
 				<tr>
 					<td colspan="2">
 						<form name="form1" method="post"
-						action="${pageContext.request.contextPath}/product/insert.do">
+						action="${pageContext.request.contextPath}/cart/insert.do">
 							<input type="hidden" name="product_id"
 							value="${dto.product_id}">
 							<select name="amount">
 								<c:forEach begin="1" end="10" var="i">
 									<option value="${i}">${i}</option>
 								</c:forEach>
-							</select>&nbsp;개
+							</select>&nbsp;=개
 							<input type="submit" value="예약">
 						</form>
 						<a href="${pageContext.request.contextPath}/product/list">ROOM LIST로 가기</a>

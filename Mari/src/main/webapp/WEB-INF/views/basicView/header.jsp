@@ -10,18 +10,10 @@
 				<ul class="d-flex flex-row align-items-center justify-content-start">
 					<li class="active"><a href="index.html">Home</a></li>
 					<li><a href="about.html">About us</a></li>
-					<li><a href="product/list">Rooms</a></li>
-					<li><a href="blog.html">News</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="${pageContext.request.contextPath}/product/list">Rooms</a></li>
 					<li><a href="${pageContext.request.contextPath}/board/list.do">board</a>
 				</ul>
 			</nav>
-						
-						
-						<a href="${pageContext.request.contextPath}/member/loginMember.do">Login</a>
-						
-						<a href="${pageContext.request.contextPath}/member/logout.do">Logout</a>
-						
 
 			<!-- Social -->
 			<div class="social header_social">
@@ -47,8 +39,7 @@
 				</div>
 
 				<!-- Header Link -->
-
-				<div class="header_link"><a href="${pageContext.request.contextPath}/member/loginMember.do">Login</a></div>
+				
 
 
 				<div class="header_link">
@@ -61,7 +52,7 @@
 					</ul>
 					</c:when>
 					<c:otherwise>
-						<a href="${pageContext.request.contextPath}/member/loginMember.do">Book Your Room Now</a>
+						<a href="${pageContext.request.contextPath}/member/loginMember.do">login</a>
 					</c:otherwise>
 				</c:choose>
 				</div>
