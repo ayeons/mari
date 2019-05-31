@@ -35,7 +35,7 @@ public class CartDAO {
 	}
 	
 	public int sumMoney(String userid) {
-		return 1;
+		return sqlSession.selectOne("cart.sumMoney", userid);
 	}
 	
 	public int countCart(String userid, int product_id) {
@@ -48,5 +48,9 @@ public class CartDAO {
 
 	public void modifyCart(CartDTO dto) {
 		
+	}
+
+	public List<CartDTO> listCart(String userid) {
+		return sqlSession.selectList("cart.listCart", userid);
 	}
 }

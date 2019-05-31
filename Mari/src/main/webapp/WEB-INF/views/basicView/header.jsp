@@ -8,7 +8,7 @@
 			<!-- Main Nav -->
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
-					<li class="active"><a href="index.html">Home</a></li>
+					<li class="active"><a href="${pageContext.request.contextPath}/">Home</a></li>
 					<li><a href="about.html">About us</a></li>
 					<li><a href="${pageContext.request.contextPath}/product/list">Rooms</a></li>
 					<li><a href="${pageContext.request.contextPath}/board/list.do">board</a>
@@ -102,11 +102,10 @@
 			<!-- Menu Navigation -->
 			<nav class="menu_nav text-center">
 				<ul>
-					<li><a href="index.html">Home</a></li>
+					<li><a href="${pageContext.request.contextPath}/">Home</a></li>
 					<li><a href="about.html">About us</a></li>
-					<li><a href="product/list">Rooms</a></li>
-					<li><a href="blog.html">News</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="${pageContext.request.contextPath}/product/list">Rooms</a></li>
+					<li><a href="${pageContext.request.contextPath}/board/list.do">boader</a></li>
 				</ul>
 			</nav>
 			<div class="button menu_button"><a href="#">book now</a></div>

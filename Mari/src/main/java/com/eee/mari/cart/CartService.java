@@ -22,7 +22,7 @@ public class CartService {
 	}
 	
 	public List<CartDTO> listCart(String userid){
-		return null;
+		return cartDao.listCart(userid);
 	}
 	
 	public void delete(int cart_id) {
@@ -37,8 +37,8 @@ public class CartService {
 		
 	}
 	
-	public void sumMoney(String userid) {
-		
+	public int sumMoney(String userid) {
+		return cartDao.sumMoney(userid);
 	}
 	
 	public int countCart(String userid, int product_id) {
