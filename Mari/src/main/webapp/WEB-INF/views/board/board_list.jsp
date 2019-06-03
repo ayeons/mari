@@ -50,6 +50,7 @@ $(function(){
 	</tr>
 </c:forEach>
 </table>
+</div>
 
 
 
@@ -60,7 +61,6 @@ $(function(){
 
 
 <%@include file="/WEB-INF/views/basicView/footer.jsp" %>
-</div>
 <%@include file="/WEB-INF/views/basicView/resourceF.jsp" %>
 </body>
 </html>

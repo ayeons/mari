@@ -12,7 +12,6 @@
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
 					<li class="active"><a href="${pageContext.request.contextPath}/">Home</a></li>
-					<li><a href="about.html">About us</a></li>
 					<li><a href="${pageContext.request.contextPath}/product/list">Rooms</a></li>
 					<li><a href="${pageContext.request.contextPath}/board/list.do">board</a>
 				</ul>
@@ -106,7 +105,6 @@
 			<nav class="menu_nav text-center">
 				<ul>
 					<li><a href="${pageContext.request.contextPath}/">Home</a></li>
-					<li><a href="about.html">About us</a></li>
 					<li><a href="${pageContext.request.contextPath}/product/list">Rooms</a></li>
 					<li><a href="${pageContext.request.contextPath}/board/list.do">boader</a></li>
 				</ul>

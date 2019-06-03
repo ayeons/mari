@@ -29,13 +29,13 @@ public class BoardController {
 		MemberDTO dto2=null;
 		String writer=null;
 		System.out.println(session.getAttribute("isLogOn"));
-		if((Boolean) session.getAttribute("isLogOn")) {
-			
-			dto2=(MemberDTO)session.getAttribute("memberInfo");
-			writer=dto2.getName();
-		}
 		
-		System.out.println(writer);
+		  if((Boolean) session.getAttribute("isLogOn")) {
+		  
+		  dto2=(MemberDTO)session.getAttribute("memberInfo"); writer=dto2.getName(); }
+		 
+		
+		System.out.println(dto.getContent());
 		dto.setWriter(writer);
 		//레코드가 저장됨
 		boardService.create(dto);
