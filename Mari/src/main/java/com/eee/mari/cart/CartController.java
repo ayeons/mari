@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.eee.mari.member.MemberDTO;
@@ -66,9 +67,22 @@ public class CartController {
 	}
 	
 	@RequestMapping("delete.do")
-	public String delete(int cart_id) {
+	public String delete(@RequestParam int cart_id) {
 		cartService.delete(cart_id);
-		return "redirect:/cart/list";
+		return "redirect:/cart/list.do";
 	}
+	
+	@RequestMapping("deleteAll.do")
+	public String deleteAll(HttpSession session) {
+		session.getAttribute("isLogOn");
+		MemberDTO dto2=(MemberDTO) session.getAttribute("memberInfo");
+		userid=dto2.getId();
+		System.out.println(userid);
+		if(userid!=null) {		
+		cartService.deleteAll(userid);
+		}
+		return "redirect:/cart/list.do";
+	}
+	
 
 }

@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt"  prefix="fmt"%>
 
-<!-- »ùÇÃjsp -->
+<!-- ìƒ˜í”Œjsp -->
 <html>
 <head>
 <%@include file="/WEB-INF/views/basicView/resourceH.jsp" %>
@@ -20,7 +20,7 @@ $(function(){
 </head>
 <body>
 <div class="super_container">
-<%@include file="/WEB-INF/views/basicView/header.jsp" %>
+<%@include file="/WEB-INF/views/basicView/header2.jsp" %>
 <div class="home">
 		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="${pageContext.request.contextPath}/resources/images/home.jpg" data-speed="0.8"></div>
 		<div class="home_container d-flex flex-column align-items-center justify-content-center">
@@ -29,15 +29,15 @@ $(function(){
 			<div class="button home_button"><a href="#">book now</a></div>
 		</div>
 </div>
-<h2>°Ô½ÃÆÇ</h2>
-<button type="button" id="btnWrite" >±Û¾²±â</button>
+<h2>ê²Œì‹œíŒ</h2>
+<button type="button" id="btnWrite" >ê¸€ì“°ê¸°</button>
 <table border="1" width="600px"style="margin: 5%;">
 	<tr>
-		<tr>¹øÈ£</tr>
-		<tr>Á¦¸ñ</tr>
-		<tr>ÀÌ¸§</tr>
-		<tr>³¯Â¥</tr>
-		<tr>Á¶È¸¼ö</tr>
+		<tr>ë²ˆí˜¸</tr>
+		<tr>ì œëª©</tr>
+		<tr>ì´ë¦„</tr>
+		<tr>ë‚ ì§œ</tr>
+		<tr>ì¡°íšŒìˆ˜</tr>
 	</tr>
 <c:forEach var="row" items="${map.list}">
 	<tr>
@@ -54,8 +54,8 @@ $(function(){
 
 
 
-<!-- ¹Ù·ÎÀ§ home class¿¡ data-image-src¿¡ ¿øÇÏ´Â »çÁø³ÖÀ¸½Ã°í -->
-<!--¿ä±â´Ù ³»¿ë  Áý¾î³ÖÀ¸¼¼¿ä-->
+<!-- ë°”ë¡œìœ„ home classì— data-image-srcì— ì›í•˜ëŠ” ì‚¬ì§„ë„£ìœ¼ì‹œê³  -->
+<!--ìš”ê¸°ë‹¤ ë‚´ìš©  ì§‘ì–´ë„£ìœ¼ì„¸ìš”-->
 
 
 

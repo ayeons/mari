@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
-<!-- »ùÇÃjsp -->
+<!-- ìƒ˜í”Œjsp -->
 <html>
 <head>
 <meta charset="EUC-KR">
@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="super_container">
-<%@include file="/WEB-INF/views/basicView/header.jsp" %>
+<%@include file="/WEB-INF/views/basicView/header2.jsp" %>
 <div class="home">
 		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="${pageContext.request.contextPath}/resources/images/home.jpg" data-speed="0.8"></div>
 		<div class="home_container d-flex flex-column align-items-center justify-content-center">
@@ -21,39 +21,51 @@
 			<div class="button home_button"><a href="#">book now</a></div>
 		</div>
 </div>
+<div class="rooms_right_content">
+	<div class="section_title text-center">
+		<div style="margin-top: 100px;">Cart</div>
+		<h1>Amazing Hotel in front of the Sea</h1>
+</div>
+<div class="row intro_row">
+				<div class="col-xl-8 col-lg-10 offset-xl-2 offset-lg-1">
+					<div class="intro_text text-center">
+						<p>Maecenas sollicitudin tincidunt maximus. Morbi tempus malesuada erat sed pellentesque. Donec pharetra mattis nulla, id laoreet neque scelerisque at. Quisque eget sem non ligula consectetur ultrices in quis augue. Donec imperd iet leo eget tortor dictum, eget varius eros sagittis. Curabitur tempor dignissim massa ut faucibus sollicitudin tinci dunt maximus. Morbi tempus malesuada erat sed pellentesque. Donec pharetra mattis nulla, id laoreet neque scele risque at. Quisque eget sem non ligula consectetur ultrices in quis augue. Donec imperdiet leo eget tortor dictum, eget varius eros sagittis. Curabitur tempor dignissim massa ut faucibus.</p>
+					</div>
+				</div>
+			</div>
 <script>
 $(function(){
 	$("#btnList").click(function(){
 		location.href="${pageContext.request.contextPath}/product/list";
 	});
 	$("#btnDelete").click(function(){
-		if(confirm("Àå¹Ù±¸´Ï¸¦ ºñ¿ì½Ã°Ú½À´Ï±î?")){
+		if(confirm("ì¥ë°”êµ¬ë‹ˆë¥¼ ë¹„ìš°ì‹œê² ìŠµë‹ˆê¹Œ?")){
 			location.href="${pageContext.request.contextPath}/cart/deleteAll.do";
 		}
 	});
 });
 </script>
-<h2>Àå¹Ù±¸´Ï</h2>
+<h1 style="display: table; margin-left: auto; margin-right: auto; margin-top: 10%;">ì˜ˆì•½ í˜ì´ì§€</h1>
 <c:choose>
 	<c:when test="${map.count == 0 }">
-	Àå¹Ù±¸´Ï°¡ ºñ¾ú½À´Ï´Ù.
+		<p>ì˜ˆì•½ ëª©ë¡ì´ ì—†ìŠµë‹ˆë‹¤.</p>
 	</c:when>
 	<c:otherwise>
 		<form id="form1" name="form1" method="post"
-		action="${pageContext.request.contextPath}/cart/update.do">
+		action="${pageContext.request.contextPath}/cart/update.do" style="display: table; margin-left: auto; margin-right: auto; margin-top: 1%;">
 			<table border="1" width="400px;">
 				<tr>
-					<th>»óÇ°¸í</th>
-					<th>´Ü°¡</th>
-					<th>¼ö·®</th>
-					<th>±İ¾×</th>
+					<th>ìƒí’ˆëª…</th>
+					<th>ë‹¨ê°€</th>
+					<th>ìˆ˜ëŸ‰</th>
+					<th>ê¸ˆì•¡</th>
 					<th>&nbsp;</th>
 				</tr>
-<!--  forEach var="°³º°º¯¼ö" items="ÁıÇÕº¯¼ö" -->
+<!--  forEach var="ê°œë³„ë³€ìˆ˜" items="ì§‘í•©ë³€ìˆ˜" -->
 <c:forEach var="row" items="${map.list}">
 	<tr align="center">
 		<td>${row.product_name}</td>
-		<td><fmt:formatNumber value="${row.price}"
+		<td><fmt:formatNumber value="${row.price}" 
 				pattern="#,###,###" /></td>
 		<td><input type="number" name="amount"
 			style="width:30px;"
@@ -67,35 +79,36 @@ $(function(){
 		<td><fmt:formatNumber value="${row.money}"
 			pattern="#,###,###"/></td>
 		<td><a href=
-		"${pageContext.request.contextPath}/cart/delete.do?cart_id=${row.cart_id}">[»èÁ¦]</a>
+		"${pageContext.request.contextPath}/cart/delete.do?cart_id=${row.cart_id}">[ì‚­ì œ]</a>
 		</td>
 	</tr>
 </c:forEach>
 	<tr>
 		<td colspan="5" align="right">
-			Àå¹Ù±¸´Ï ±İ¾× ÇÕ°è :
+			ì¥ë°”êµ¬ë‹ˆ ê¸ˆì•¡ í•©ê³„ :
 			<fmt:formatNumber value="${map.sumMoney}"
 				pattern="#,###,###" /><br>
-				¹è¼Û·á : ${map.fee}<br>
-				ÃÑÇÕ°è : <fmt:formatNumber value="${map.sum}"
+				ë°°ì†¡ë£Œ : ${map.fee}<br>
+				ì´í•©ê³„ : <fmt:formatNumber value="${map.sum}"
 					pattern="#,###,###" />
 			</td>
 		</tr>
 	</table>
-	<button id="btnUpdate">¼öÁ¤</button>
-	<button type="button" id="btnDelete">Àå¹Ù±¸´Ï ºñ¿ì±â</button>
+	<button id="btnUpdate">ìˆ˜ì •</button>
+	<button type="button" id="btnDelete">ì¥ë°”êµ¬ë‹ˆ ë¹„ìš°ê¸°</button>
 	</form>
 </c:otherwise>
 </c:choose>
-<button type="button" id="btnList">»óÇ°¸ñ·Ï</button>
+<button type="button" id="btnList">ìƒí’ˆëª©ë¡</button>
+
+			</div>
 
 
 
 
 
-
-<!-- ¹Ù·ÎÀ§ home class¿¡ data-image-src¿¡ ¿øÇÏ´Â »çÁø³ÖÀ¸½Ã°í -->
-<!--¿ä±â´Ù ³»¿ë  Áı¾î³ÖÀ¸¼¼¿ä-->
+<!-- ë°”ë¡œìœ„ home classì— data-image-srcì— ì›í•˜ëŠ” ì‚¬ì§„ë„£ìœ¼ì‹œê³  -->
+<!--ìš”ê¸°ë‹¤ ë‚´ìš©  ì§‘ì–´ë„£ìœ¼ì„¸ìš”-->
 
 
 

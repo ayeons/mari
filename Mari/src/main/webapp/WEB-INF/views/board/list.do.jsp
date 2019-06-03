@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<!-- »ùÇÃjsp -->
+<!-- ìƒ˜í”Œjsp -->
 <html>
 <head>
 <meta charset="EUC-KR">
@@ -20,13 +20,13 @@
 			<div class="button home_button"><a href="#">book now</a></div>
 		</div>
 </div>
-¾È³çÇÏ¼¼¿ä.
+ì•ˆë…•í•˜ì„¸ìš”.
 
 
 
 
-<!-- ¹Ù·ÎÀ§ home class¿¡ data-image-src¿¡ ¿øÇÏ´Â »çÁø³ÖÀ¸½Ã°í -->
-<!--¿ä±â´Ù ³»¿ë  Áý¾î³ÖÀ¸¼¼¿ä-->
+<!-- ë°”ë¡œìœ„ home classì— data-image-srcì— ì›í•˜ëŠ” ì‚¬ì§„ë„£ìœ¼ì‹œê³  -->
+<!--ìš”ê¸°ë‹¤ ë‚´ìš©  ì§‘ì–´ë„£ìœ¼ì„¸ìš”-->
 
 
 

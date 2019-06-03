@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
-<!-- »ùÇÃjsp -->
+<!-- ìƒ˜í”Œjsp -->
 <html>
 <head>
 <style>
@@ -14,6 +14,7 @@ color: black;
 font-style: inherit;
 }
 
+
 </style>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
@@ -21,7 +22,7 @@ font-style: inherit;
 </head>
 <body>
 <div class="super_container">
-<%@include file="/WEB-INF/views/basicView/header.jsp" %>
+<%@include file="/WEB-INF/views/basicView/header2.jsp" %>
 <div class="home">
 		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="${pageContext.request.contextPath}/resources/images/home.jpg" data-speed="0.8"></div>
 		<div class="home_container d-flex flex-column align-items-center justify-content-center">
@@ -43,9 +44,9 @@ font-style: inherit;
 					</div>
 				</div>
 			</div>
-<button type="button" id="dtnAdd"  style="margin-left: auto; margin-right: auto;">»óÇ°µî·Ï</button>
-<table width="#" style="margin-left: auto; margin-right: auto;">
-	<tr style="margin-bottom: 5%;">
+<button type="button" id="dtnAdd"  style="margin-left: auto; margin-right: auto;">ìƒí’ˆë“±ë¡</button>
+<table width="#" style="margin-left: auto; margin-right: auto;" border="1" >
+	<tr style="margin-bottom: 5%;" >
 		<th>Product ID</th>
 		<th>&nbsp;</th>
 		<th style="padding-right: 25px;">name</th>
@@ -70,8 +71,8 @@ font-style: inherit;
 
 
 
-<!-- ¹Ù·ÎÀ§ home class¿¡ data-image-src¿¡ ¿øÇÏ´Â »çÁø³ÖÀ¸½Ã°í -->
-<!--¿ä±â´Ù ³»¿ë  Áı¾î³ÖÀ¸¼¼¿ä-->
+<!-- ë°”ë¡œìœ„ home classì— data-image-srcì— ì›í•˜ëŠ” ì‚¬ì§„ë„£ìœ¼ì‹œê³  -->
+<!--ìš”ê¸°ë‹¤ ë‚´ìš©  ì§‘ì–´ë„£ìœ¼ì„¸ìš”-->
 
 
 

@@ -24,10 +24,11 @@ public class CartDAO {
 	}
 	
 	public void delete(int cart_id) {
-		
+		sqlSession.delete("cart.delete", cart_id);
 	}
 	public void deleteAll(String userid) {
-		
+		System.out.println("dao " + userid);
+		sqlSession.delete("cart.deleteAll", userid);
 	}
 	
 	public void update(int cart_id) {

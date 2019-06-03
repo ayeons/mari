@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="super_container">
-<%@include file="header.jsp" %> 
+<%@include file="header2.jsp" %> 
 	
 
 	<!-- Home -->
@@ -98,7 +98,7 @@
 									<div class="text-center d-flex flex-column align-items-center justify-content-center">
 										<a href="product/list">
 											<span>+</span>
-											<span>¥ı∫∏±‚</span>
+											<span>ÎçîÎ≥¥Í∏∞</span>
 										</a>
 									</div>
 								</div>
@@ -111,7 +111,7 @@
 									<div class="text-center d-flex flex-column align-items-center justify-content-center">
 										<a href="product/list">
 											<span>+</span>
-											<span>¥ı∫∏±‚</span>
+											<span>ÎçîÎ≥¥Í∏∞</span>
 										</a>
 									</div>
 								</div>
@@ -124,7 +124,7 @@
 									<div class="text-center d-flex flex-column align-items-center justify-content-center">
 										<a href="product/list">
 											<span>+</span>
-											<span>¥ı∫∏±‚</span>
+											<span>ÎçîÎ≥¥Í∏∞</span>
 										</a>
 									</div>
 								</div>
@@ -137,7 +137,7 @@
 									<div class="text-center d-flex flex-column align-items-center justify-content-center">
 										<a href="product/list">
 											<span>+</span>
-											<span>¥ı∫∏±‚</span>
+											<span>ÎçîÎ≥¥Í∏∞</span>
 										</a>
 									</div>
 								</div>

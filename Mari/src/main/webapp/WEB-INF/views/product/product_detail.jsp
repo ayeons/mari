@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<!-- »ùÇÃjsp -->
+<!-- ìƒ˜í”Œjsp -->
 <html>
 <head>
 <style>
@@ -71,10 +71,10 @@ font-style: inherit;
 								<c:forEach begin="1" end="10" var="i">
 									<option value="${i}">${i}</option>
 								</c:forEach>
-							</select>&nbsp;=°³
-							<input type="submit" value="¿¹¾à">
+							</select>&nbsp;=ê°œ
+							<input type="submit" value="ì˜ˆì•½">
 						</form>
-						<a href="${pageContext.request.contextPath}/product/list">ROOM LIST·Î °¡±â</a>
+						<a href="${pageContext.request.contextPath}/product/list">ROOM LISTë¡œ ê°€ê¸°</a>
 					</td>
 				</tr>
 </table>
@@ -84,8 +84,8 @@ font-style: inherit;
 
 
 
-<!-- ¹Ù·ÎÀ§ home class¿¡ data-image-src¿¡ ¿øÇÏ´Â »çÁø³ÖÀ¸½Ã°í -->
-<!--¿ä±â´Ù ³»¿ë  Áý¾î³ÖÀ¸¼¼¿ä-->
+<!-- ë°”ë¡œìœ„ home classì— data-image-srcì— ì›í•˜ëŠ” ì‚¬ì§„ë„£ìœ¼ì‹œê³  -->
+<!--ìš”ê¸°ë‹¤ ë‚´ìš©  ì§‘ì–´ë„£ìœ¼ì„¸ìš”-->
 
 
 

@@ -26,11 +26,11 @@ public class CartService {
 	}
 	
 	public void delete(int cart_id) {
-		
+		cartDao.delete(cart_id);
 	}
 	
 	public void deleteAll(String userid) {
-		
+		cartDao.deleteAll(userid);
 	}
 	
 	public void update(int cart_id) {

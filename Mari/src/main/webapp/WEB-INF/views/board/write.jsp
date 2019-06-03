@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<!-- »ùÇÃjsp -->
+<!-- ìƒ˜í”Œjsp -->
 <html>
 <head>
 <meta charset="EUC-KR">
@@ -29,32 +29,32 @@ $(function(){
 		</div>
 </div>
 
-<h2>±Û¾²±â</h2>
+<h2>ê¸€ì“°ê¸°</h2>
 <form id="form1" name="form1" method="post"
 action="${pageContext.request.contextPath}/board/insert.do">
 <div>
-	Á¦¸ñ <input name="title" id="title" size="80"
-		placeholder="Á¦¸ñÀ» ÀÔ·ÂÇÏ¼¼¿ä.">
+	ì œëª© <input name="title" id="title" size="80"
+		placeholder="ì œëª©ì„ ìž…ë ¥í•˜ì„¸ìš”.">
 </div>
 <div style="width:800px;">
-	³»¿ë <textarea id="content" name="content" rows="3" cols="80"
-		placeholder="³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä."></textarea>
+	ë‚´ìš© <textarea id="content" name="content" rows="3" cols="80"
+		placeholder="ë‚´ìš©ì„ ìž…ë ¥í•˜ì„¸ìš”."></textarea>
 </div>
 <div>
-	Ã·ºÎÆÄÀÏÀ» µî·ÏÇÏ¼¼¿ä.
+	ì²¨ë¶€íŒŒì¼ì„ ë“±ë¡í•˜ì„¸ìš”.
 	<div class="fileDrop"></div>
 	<div id="uploadedList"></div>
 </div>
 <div style="width:700px; text-align:center">
-	<button type="button" id="btnSave">È®ÀÎ</button>
+	<button type="button" id="btnSave">í™•ì¸</button>
 </div>
 </form>
 
 
 
 
-<!-- ¹Ù·ÎÀ§ home class¿¡ data-image-src¿¡ ¿øÇÏ´Â »çÁø³ÖÀ¸½Ã°í -->
-<!--¿ä±â´Ù ³»¿ë  Áý¾î³ÖÀ¸¼¼¿ä-->
+<!-- ë°”ë¡œìœ„ home classì— data-image-srcì— ì›í•˜ëŠ” ì‚¬ì§„ë„£ìœ¼ì‹œê³  -->
+<!--ìš”ê¸°ë‹¤ ë‚´ìš©  ì§‘ì–´ë„£ìœ¼ì„¸ìš”-->
 
 
 
