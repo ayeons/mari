@@ -14,7 +14,7 @@
 <div class="super_container">
 <%@include file="/WEB-INF/views/basicView/header2.jsp" %>
 <div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="${pageContext.request.contextPath}/resources/images/home.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="${pageContext.request.contextPath}/resources/images/room_13.jpg" data-speed="0.8"></div>
 		<div class="home_container d-flex flex-column align-items-center justify-content-center">
 			<div class="home_title"><h1>Book Your Stay</h1></div>
 			<div class="home_text text-center">Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec vitae tempus dolor, sit amet elementum lorem. Ut cursus tempor turpis.</div>
@@ -23,7 +23,7 @@
 </div>
 <div class="rooms_right_content">
 	<div class="section_title text-center">
-		<div style="margin-top: 100px;">Cart</div>
+		<div style="margin-top: 20px;">Cart</div>
 		<h1>Amazing Hotel in front of the Sea</h1>
 </div>
 <div class="row intro_row">
@@ -44,8 +44,15 @@ $(function(){
 		}
 	});
 });
+$(function(){
+	$("#btnUpdate").click(function(){
+		location.href="${pageContext.request.contextPath}/cart/update.do";
+	});
+});
 </script>
-<h1 style="display: table; margin-left: auto; margin-right: auto; margin-top: 10%;">예약 페이지</h1>
+<img src="${pageContext.request.contextPath}/resources/images/room_111.jpg" width="1000" height="500" style="display: table; margin-left: auto; margin-right:  auto; margin-top: 5%;">
+<h1 style="display: table; margin-left: auto; margin-right: auto; margin-top: 2%;">Booking page</h1>
+
 <c:choose>
 	<c:when test="${map.count == 0 }">
 		<p>예약 목록이 없습니다.</p>
@@ -53,7 +60,7 @@ $(function(){
 	<c:otherwise>
 		<form id="form1" name="form1" method="post"
 		action="${pageContext.request.contextPath}/cart/update.do" style="display: table; margin-left: auto; margin-right: auto; margin-top: 1%;">
-			<table border="1" width="400px;">
+			<table border="1" width="400px;" style="width: 600px; height: 300px;">
 				<tr>
 					<th>상품명</th>
 					<th>단가</th>
@@ -84,6 +91,7 @@ $(function(){
 	</tr>
 </c:forEach>
 	<tr>
+	<td><img src="${pageContext.request.contextPath}/resources/images/${dto.picture_url}" width="100" height="150" ></td>
 		<td colspan="5" align="right">
 			장바구니 금액 합계 :
 			<fmt:formatNumber value="${map.sumMoney}"

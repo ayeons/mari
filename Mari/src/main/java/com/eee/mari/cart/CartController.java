@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.eee.mari.member.MemberDTO;
+import com.eee.mari.product.ProductDTO;
+import com.eee.mari.product.ProductService;
 
 @Controller
 @RequestMapping("/cart/*")
@@ -21,8 +23,10 @@ public class CartController {
 	
 	@Inject
 	CartService cartService;
+	ProductService Service;
 	
 	String userid = null;
+	String userid2 = null;
 	
 	@RequestMapping("insert.do")
 	public String insert(@ModelAttribute CartDTO dto, 
@@ -80,6 +84,27 @@ public class CartController {
 		System.out.println(userid);
 		if(userid!=null) {		
 		cartService.deleteAll(userid);
+		}
+		return "redirect:/cart/list.do";
+	}
+	
+	@RequestMapping("update.do")
+	public String update(
+			int[] amount, int[] cart_id, HttpSession session) {
+			session.getAttribute("isLogOn");
+			MemberDTO dto2=(MemberDTO) session.getAttribute("memberInfo");
+			userid=dto2.getId();
+			System.out.println(userid);
+		for(int i=0; i<cart_id.length; i++) {
+			if(amount[i]==0) {
+				cartService.delete(cart_id[i]);
+			}else {
+				CartDTO dto=new CartDTO();
+				dto.setUserid(userid);
+				dto.setCart_id(cart_id[i]);
+				dto.setAmount(amount[i]);
+				cartService.modifyCart(dto);
+			}
 		}
 		return "redirect:/cart/list.do";
 	}

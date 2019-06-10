@@ -22,7 +22,7 @@ font-style: inherit;
 <div class="super_container">
 <%@include file="/WEB-INF/views/basicView/header.jsp" %>
 <div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="${pageContext.request.contextPath}/resources/images/home.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="${pageContext.request.contextPath}/resources/images/room_12.jpg" data-speed="0.8"></div>
 		<div class="home_container d-flex flex-column align-items-center justify-content-center">
 			<div class="home_title"><h1>Book Your Stay</h1></div>
 			<div class="home_text text-center">Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec vitae tempus dolor, sit amet elementum lorem. Ut cursus tempor turpis.</div>
@@ -45,12 +45,12 @@ font-style: inherit;
 	<tr>
 		<td>
 			<img src="${pageContext.request.contextPath}/resources/images/${dto.picture_url}"
-				width="300px" height="300px" style="margin: 50px;">
+				width="400px" height="300px" style="margin: 50px;">
 		</td>
 		<td align="center">
 			<table>
 				<tr>
-					<td style="margin-right: 50px;">room name</td>
+					<td style="margin-right: 50px; padding-right: 30px;">room name</td>
 					<td>${dto.product_name}</td>
 				</tr>
 				<tr>

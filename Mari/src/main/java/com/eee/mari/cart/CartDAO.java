@@ -48,6 +48,7 @@ public class CartDAO {
 	}
 
 	public void modifyCart(CartDTO dto) {
+		sqlSession.update("cart.modify", dto);
 		
 	}
 

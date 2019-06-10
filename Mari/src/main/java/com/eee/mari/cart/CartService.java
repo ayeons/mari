@@ -50,7 +50,7 @@ public class CartService {
 	}
 	
 	public void modifyCart(CartDTO dto) {
-		
+		cartDao.modifyCart(dto);
 	}
 
 }

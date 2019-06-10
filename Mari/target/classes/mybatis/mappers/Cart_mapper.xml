@@ -25,13 +25,20 @@ PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
 		where c.product_id=p.product_id and userid=#{userid}	
 	</select>
 	
+	<!--  장바구니 개별 상품 삭제 -->
 	<select id="delete" resultType="int">
 		delete from cart where cart_id=#{cart_id}
 	</select>
 	
+	<!-- 장바구니 비우기 -->
 	<select id="deleteAll" >
 		delete from cart where userid=#{userid}
 	</select>
+	
+	<update id="modify">
+		update cart set amount=#{amount}
+		where cart_id=#{cart_id}
+	</update>
 
 
 

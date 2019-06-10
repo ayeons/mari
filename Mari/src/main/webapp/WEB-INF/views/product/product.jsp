@@ -24,7 +24,7 @@ font-style: inherit;
 <div class="super_container">
 <%@include file="/WEB-INF/views/basicView/header2.jsp" %>
 <div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="${pageContext.request.contextPath}/resources/images/home.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="${pageContext.request.contextPath}/resources/images/room_12.jpg" data-speed="0.8"></div>
 		<div class="home_container d-flex flex-column align-items-center justify-content-center">
 			<div class="home_title"><h1>Book Your Stay</h1></div>
 			<div class="home_text text-center">Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec vitae tempus dolor, sit amet elementum lorem. Ut cursus tempor turpis.</div>
@@ -45,20 +45,20 @@ font-style: inherit;
 				</div>
 			</div>
 <button type="button" id="dtnAdd"  style="margin-left: auto; margin-right: auto;">상품등록</button>
-<table width="#" style="margin-left: auto; margin-right: auto;" border="1" >
+<table width="#" style="margin-left: auto; margin-right: auto;" >
 	<tr style="margin-bottom: 5%;" >
 		<th>Product ID</th>
 		<th>&nbsp;</th>
-		<th style="padding-right: 25px;">name</th>
+		<th style="padding-right: 30px;">name</th>
 		<th>price</th>
 	</tr>
 <c:forEach var="row" items="${list}">
 	<tr align="center">
 		<td>${row.product_id}</td>
 		<td><img src="${pageContext.request.contextPath}/resources/images/${row.picture_url}"
-		width="600" height="300" style="margin: 50px;"></td>
+		width="600" height="350" style="margin: 50px;"></td>
 
-		<td>
+		<td style="padding-right: 30px;">
 		<a href="${pageContext.request.contextPath}/product/detail/${row.product_id}">
 		${row.product_name}</a></td>
 		<td>
