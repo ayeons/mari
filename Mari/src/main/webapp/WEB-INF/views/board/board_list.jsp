@@ -32,18 +32,18 @@ $(function(){
 <h2>게시판</h2>
 <button type="button" id="btnWrite" >글쓰기</button>
 <table border="1" width="600px"style="margin: 5%;">
-	<tr>
-		<tr>번호</tr>
-		<tr>제목</tr>
-		<tr>이름</tr>
-		<tr>날짜</tr>
-		<tr>조회수</tr>
+	<tr style="color: black;">
+		<td>번호</td>
+		<td>제목</td>
+		<td>이름</td>
+		<td>날짜</td>
+		<td>조회수</td>
 	</tr>
 <c:forEach var="row" items="${map.list}">
 	<tr>
 		<td>${row.bno}</td>
 		<td>${row.title}</td>
-		<td>${row.writer}</td>
+		<td>${row.name}</td>
 		<td><fmt:formatDate value="${row.regdate}"
 			pattern="yyyy-mm-dd HH:mm:ss" /></td>
 		<td>${row.viewcnt}</td>
