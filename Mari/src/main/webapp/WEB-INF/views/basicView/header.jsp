@@ -39,7 +39,7 @@
 
 				<!-- Header Link -->
 				
-
+				<!-- 로그인 화면  -->
 
 				<div class="header_link">
 				<c:choose>

@@ -13,7 +13,7 @@ public class AdminDAO {
 	@Inject
 	SqlSession sqlSession;
 	
-	public String loginCheck(MemberDTO dto) {
+	public String loginCheck(AdminDTO dto) {
 		return sqlSession.selectOne("admin.login_check", dto);
 	}
 

@@ -21,9 +21,24 @@ public class ProductService {
 		return productDao.listProduct();
 	}
 
-	public Object detailProduct(int product_id) {
+	public ProductDTO detailProduct(int product_id) {
 		return productDao.detailProduct(product_id);
 	}
 
+	public void insertProduct(ProductDTO dto) {
+		productDao.insertProduct(dto);
+	}
+	
+	public void updateProduct(ProductDTO dto) {
+		productDao.updateProduct(dto);
+	}
+	
+	public void deleteProduct(int product_id) {
+		productDao.deleteProduct(product_id);
+	}
+
+	public String fileInfo(int product_id) {
+		return productDao.fileInfo(product_id);
+	}
 
 }

@@ -42,21 +42,42 @@
 
 				<!-- Header Link -->
 				
-
-
+				<!-- 로그인 화면  -->
+			
 				<div class="header_link">
 				<c:choose>
 					<c:when test="${isLogOn==true and not empty memberInfo }">
+		
 					<ul class="row">
 						<li><a href="${pageContext.request.contextPath}/mypage/myDetailInfo.do">${memberInfo.getName() }</a></li>
 						<li><a href="${pageContext.request.contextPath}/cart/list.do">예약 확인</a></li>
 						<li><a href="${pageContext.request.contextPath}/member/logout.do">Log Out</a></li>
 					</ul>
+					
 					</c:when>
+					
 					<c:otherwise>
-						<a href="${pageContext.request.contextPath}/member/loginMember.do">login</a>
+					<ul class="row">
+						<li><a href="${pageContext.request.contextPath}/member/loginMember.do">login</a></li>
+					</ul>
 					</c:otherwise>
+					
 				</c:choose>
+				
+				</div>
+				<div>
+				<c:choose>
+	<c:when test="${sessionScope.admin_userid == null }">
+		<a href="${pageContext.request.contextPath}/admin/login.do">관리자 로그인</a>
+	</c:when>
+	<c:otherwise>
+		<a href="${pageContext.request.contextPath}/admin/logout.do">로그아웃</a>
+		<a href="${pageContext.request.contextPath}/admin/login_check.do">관리자페이지</a>
+	</c:otherwise>
+</c:choose>
+				
+				
+				
 				</div>
 				
 			

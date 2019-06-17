@@ -13,9 +13,10 @@ text-shadow: blue;
 color: black;
 font-style: inherit;
 }
-
-
 </style>
+<script>
+//기능 미구현
+</script>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <%@include file="/WEB-INF/views/basicView/resourceH.jsp" %>
@@ -61,8 +62,14 @@ font-style: inherit;
 		<td style="padding-right: 30px;">
 		<a href="${pageContext.request.contextPath}/product/detail/${row.product_id}">
 		${row.product_name}</a></td>
+		<!-- 관리자만 편집 버튼 표시 -->
 		<td>
 	<fmt:formatNumber value="${row.price}" pattern="#,###" /></td>
+		<td>
+		<c:if test="${sessionScope.admin_userid != null }">
+			<a href="${pageContext.request.contextPath}/product/edit/${row.product_id}" style="margin-left: 20px;">[편집]</a>
+		</c:if>
+		</td>
 	</tr>
 </c:forEach>
 </table>

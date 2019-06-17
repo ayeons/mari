@@ -24,6 +24,24 @@ public class ProductDAO {
 		return sqlSession.selectOne(
 				"product.detail_product", product_id);
 	}
+	
+	public void insertProduct(ProductDTO dto) {
+		sqlSession.insert("product.insert", dto);
+		
+	}
+
+	public void updateProduct(ProductDTO dto) {
+		sqlSession.update("product.update_product", dto);
+		
+	}
+	
+	public void deleteProduct(int product_id) {
+		sqlSession.delete("product.product_delete", product_id);
+	}
+
+	public String fileInfo(int product_id) {
+		return sqlSession.selectOne("product.file_info", product_id);
+	}
 
 	
 }
