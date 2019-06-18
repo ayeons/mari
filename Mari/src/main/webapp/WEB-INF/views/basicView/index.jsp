@@ -15,7 +15,7 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="${pageContext.request.contextPath}/resources/images/room_08.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="${pageContext.request.contextPath}/resources/images/home22.jpg" data-speed="0.8"></div>
 		<div class="home_container d-flex flex-column align-items-center justify-content-center">
 			<div class="home_title"><h1>Hotel & Resort</h1></div>
 			<div class="home_text text-center">Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec vitae tempus dolor, sit amet elementum lorem. Ut cursus tempor turpis.</div>
@@ -72,7 +72,7 @@
 				<div class="col">
 					<div class="section_title text-center">
 						<div>Welcome</div>
-						<h1>Amazing Hotel in front of the Sea</h1>
+						<h1>아름다운 바다가 보이는 호텔을 경험해보세요</h1>
 					</div>
 				</div>
 			</div>

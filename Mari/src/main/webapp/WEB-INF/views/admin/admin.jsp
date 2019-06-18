@@ -20,7 +20,10 @@
 		</div>
 </div>
 
-<div style="display: table; margin-right: auto; margin-left: auto; margin-top: 10%;margin-bottom: 1%;">
+<div style="display: table; margin-right: auto; margin-left: auto; margin-top: 1%;margin-bottom: 1%;">
+<img src="${pageContext.request.contextPath}/resources/images/it.jpg" style="height: 400px; width: 800px;"><br>
+</div>
+<div style="display: table; margin-right: auto; margin-left: auto; margin-top: 1%;margin-bottom: 1%;">
 <%@ include file="../include/admin_menu.jsp" %>
 
 <c:if test="${message == 'success' }">

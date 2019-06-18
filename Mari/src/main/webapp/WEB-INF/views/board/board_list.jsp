@@ -37,7 +37,7 @@ function list(page){
 
 <div class="rooms_right_content">
 	<div class="section_title text-center">
-		<div style="margin-top: 100px;">notice board</div>
+		<div style="margin-top: 20px;">notice board</div>
 		<h1>Amazing Hotel in front of the Sea</h1>
 </div>
 <div class="row intro_row">
