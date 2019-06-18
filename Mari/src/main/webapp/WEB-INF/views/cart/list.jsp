@@ -50,7 +50,6 @@ $(function(){
 	});
 });
 </script>
-<img src="${pageContext.request.contextPath}/resources/images/room_111.jpg" width="1000" height="500" style="display: table; margin-left: auto; margin-right:  auto; margin-top: 5%;">
 <h1 style="display: table; margin-left: auto; margin-right: auto; margin-top: 2%;">Booking page</h1>
 
 <c:choose>
@@ -91,7 +90,7 @@ $(function(){
 	</tr>
 </c:forEach>
 	<tr>
-	<td><img src="${pageContext.request.contextPath}/resources/images/${dto.picture_url}" width="100" height="150" ></td>
+	<td><img src="${pageContext.request.contextPath}/resources/images/room_13.jpg" width="300" height="150" ></td>
 		<td colspan="5" align="right">
 			장바구니 금액 합계 :
 			<fmt:formatNumber value="${map.sumMoney}"

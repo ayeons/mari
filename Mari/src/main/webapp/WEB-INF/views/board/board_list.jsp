@@ -43,7 +43,7 @@ $(function(){
 	<tr>
 		<td>${row.bno}</td>
 		<td>${row.title}</td>
-		<td>${row.name}</td>
+		<td>${row.writer}</td>
 		<td><fmt:formatDate value="${row.regdate}"
 			pattern="yyyy-mm-dd HH:mm:ss" /></td>
 		<td>${row.viewcnt}</td>
