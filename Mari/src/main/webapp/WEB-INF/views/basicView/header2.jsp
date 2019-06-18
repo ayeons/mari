@@ -68,11 +68,10 @@
 				<div>
 				<c:choose>
 	<c:when test="${sessionScope.admin_userid == null }">
-		<a href="${pageContext.request.contextPath}/admin/login.do">관리자 로그인</a>
+		<a href="${pageContext.request.contextPath}/admin/login.do">[관리자 로그인]</a>
 	</c:when>
 	<c:otherwise>
-		<a href="${pageContext.request.contextPath}/admin/logout.do">로그아웃</a>
-		<a href="${pageContext.request.contextPath}/admin/login_check.do">관리자페이지</a>
+		<a href="${pageContext.request.contextPath}/admin/logout.do">[로그아웃]</a>
 	</c:otherwise>
 </c:choose>
 				

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" 
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
@@ -20,13 +20,12 @@ font-style: inherit;
 </head>
 <body>
 <div class="super_container">
-<%@include file="/WEB-INF/views/basicView/header.jsp" %>
+<%@include file="/WEB-INF/views/basicView/header2.jsp" %>
 <div class="home">
 		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="${pageContext.request.contextPath}/resources/images/room_12.jpg" data-speed="0.8"></div>
 		<div class="home_container d-flex flex-column align-items-center justify-content-center">
-			<div class="home_title"><h1>Book Your Stay</h1></div>
+			<div class="home_title"><h1>Hotel & Resort</h1></div>
 			<div class="home_text text-center">Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec vitae tempus dolor, sit amet elementum lorem. Ut cursus tempor turpis.</div>
-			<div class="button home_button"><a href="#">book now</a></div>
 		</div>
 </div>
 <div class="rooms_right_content">
@@ -58,7 +57,7 @@ font-style: inherit;
 					<td>${dto.price}</td>
 				</tr>
 				<tr>
-					<td>%nbsp;</td>
+					<td>description</td>
 					<td>${dto.description}</td>
 				</tr>
 				<tr>
@@ -71,7 +70,7 @@ font-style: inherit;
 								<c:forEach begin="1" end="10" var="i">
 									<option value="${i}">${i}</option>
 								</c:forEach>
-							</select>&nbsp;=개
+							</select> =개
 							<input type="submit" value="예약">
 						</form>
 						<a href="${pageContext.request.contextPath}/product/list">ROOM LIST로 가기</a>

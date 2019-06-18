@@ -1,6 +1,8 @@
 package com.eee.mari.board;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -45,6 +47,10 @@ public class BoardDAO {
 	
 	}
 	
+	public BoardDTO read(int bno) throws Exception {
+		return sqlSession.selectOne("board.view", bno);
+	}
+	
 	//글수정
 	public void update(BoardDTO dto) throws Exception{
 		
@@ -58,18 +64,26 @@ public class BoardDAO {
 	//게시물 목록
 	public List<BoardDTO> listAll(int start, int end,
 			String search_option, String keyword) throws Exception{
-		return sqlSession.selectList("board.listAll");
+		Map<String,Object> map=new HashMap<>();
+		map.put("search_option", search_option);
+		map.put("keyword", keyword);
+		map.put("start", start);
+		map.put("end", end);
+		return sqlSession.selectList("board.listAll", map);
 	}
 	
 	//조회수 증가 처리
 	public void increaseViewCnt(int bno) throws Exception{
-		
+		sqlSession.update("board.increaseViewcnt", bno);
 	}
 	
 	//레코드 갯수 계산
 	public int countArticle(String search_option, String keyword)
 		throws Exception{
-		return 1;
+		Map<String,String> map=new HashMap<>();
+		map.put("search_option", search_option);
+		map.put("keyword", keyword);
+		return sqlSession.selectOne("board.countArticle", map);
 	}
 	
 	

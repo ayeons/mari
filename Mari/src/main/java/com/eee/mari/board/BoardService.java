@@ -35,7 +35,7 @@ public class BoardService {
 	}
 	
 	public BoardDTO read(int bno) throws Exception {
-		return null;
+		return boardDao.read(bno);
 	}
 	
 	public void update(BoardDTO dto) throws Exception{
@@ -52,11 +52,11 @@ public class BoardService {
 	}
 	
 	public void increaseViewcnt(int bno) throws Exception{
-		
+		boardDao.increaseViewCnt(bno);
 	}
 	
 	public int countArticle(String search_option, String keyword) throws Exception{
-		return 1;
+		return boardDao.countArticle(search_option, keyword);
 	}
 
 }

@@ -16,9 +16,9 @@
 <div class="home">
 		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="${pageContext.request.contextPath}/resources/images/room_13.jpg" data-speed="0.8"></div>
 		<div class="home_container d-flex flex-column align-items-center justify-content-center">
-			<div class="home_title"><h1>Book Your Stay</h1></div>
+			<div class="home_title"><h1>Hotel & Resort</h1></div>
 			<div class="home_text text-center">Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec vitae tempus dolor, sit amet elementum lorem. Ut cursus tempor turpis.</div>
-			<div class="button home_button"><a href="#">book now</a></div>
+			
 		</div>
 </div>
 <div class="rooms_right_content">
@@ -102,7 +102,7 @@ $(function(){
 		</tr>
 	</table>
 	<button id="btnUpdate">수정</button>
-	<button type="button" id="btnDelete">장바구니 비우기</button>
+	<button type="button" id="btnDelete">방 예약 취소</button>
 	</form>
 </c:otherwise>
 </c:choose>

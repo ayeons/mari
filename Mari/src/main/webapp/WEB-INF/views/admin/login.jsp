@@ -14,9 +14,9 @@
 <div class="home">
 		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="${pageContext.request.contextPath}/resources/images/room21.jpg" data-speed="0.8"></div>
 		<div class="home_container d-flex flex-column align-items-center justify-content-center">
-			<div class="home_title"><h1>Book Your Stay</h1></div>
+			<div class="home_title"><h1>Hotel & Resort</h1></div>
 			<div class="home_text text-center">Fusce erat dui, venenatis et erat in, vulputate dignissim lacus. Donec vitae tempus dolor, sit amet elementum lorem. Ut cursus tempor turpis.</div>
-			<div class="button home_button"><a href="#">book now</a></div>
+			
 		</div>
 </div>
 <script>
@@ -38,12 +38,28 @@ $(function(){
 		document.form1.submit();
 	});
 });
-
 </script>
-<h2>관리자 로그인</h2>
 
+
+
+
+
+
+
+
+<div class="contact" >
+		<div class="contact_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="section_title text-center">
+							<div style="margin-top: 10%;">LOG IN</div>
+<h2 style="margin-top: 10%;">관리자 로그인</h2>
+							</div>
+
+<div class="contact_form_container">
 <form name="form1" method="post">
-	<table border="1" method="post">
+	<table border="1" method="post"  style="display:table; margin-left: auto; margin-right: auto;  margin-bottom: 10%;">
 		<tr>
 			<td>아이디</td>
 			<td><input id="userid" name="userid"></td>
@@ -74,6 +90,15 @@ $(function(){
 		</tr>
 	</table>
 </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
 
 
 <!-- 바로위 home class에 data-image-src에 원하는 사진넣으시고 -->
